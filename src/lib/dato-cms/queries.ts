@@ -24,9 +24,6 @@ export const homeSectionQuery = `
   homeSection {
     title
     subTitle
-    resume {
-      url
-    }
     socialLinks {
       name
       url
@@ -40,6 +37,8 @@ export const homeSectionQuery = `
     sideImage {
       url
       alt
+      height
+      width
       responsiveImage(imgixParams: {fm: png, fit: crop, w: 400, h: 400 }) {
         ...responsiveImageFragment
       }

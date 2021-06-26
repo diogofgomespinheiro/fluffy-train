@@ -42,7 +42,6 @@ const RecentWorkSection = () => {
           ))}
       </S.ProjectsGrid>
       <Button
-        showShadow
         onClick={() =>
           handleClick('https://www.behance.net/ritaaaqueiros/projects')
         }

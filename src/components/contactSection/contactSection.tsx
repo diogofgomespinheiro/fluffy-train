@@ -14,7 +14,7 @@ const ContactSection = ({
     <S.Container id="contact">
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
-      <Button showShadow elementType="a" href={`mailto:${button.url}`}>
+      <Button elementType="a" href={`mailto:${button.url}`}>
         {button.text}
       </Button>
     </S.Container>

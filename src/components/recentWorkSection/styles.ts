@@ -26,10 +26,7 @@ export const ProjectWrapper = styled.div`
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
-
-  &:hover {
-    background-size: 110%;
-  }
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
 `;
 
 export const Project = styled.div<{ backgroundImage: string }>`

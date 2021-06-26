@@ -3,7 +3,7 @@ import { Colors } from '@diogop_96/portfolio-component-library';
 import { ThemeColors } from '@/styles/themes';
 
 export const colors: ThemeColors = {
-  background: '#E5E5E5',
+  background: '#FAFBFF',
   primary: '#3D405B',
   secondary: '#A2A5AF',
   accent: '#E29578'
@@ -35,7 +35,7 @@ export const libColors: Colors = {
     secondaryText: '#A2A5AF'
   },
   hamburguer: {
-    strokeColor: '#FAFBFF'
+    strokeColor: '#3D405B'
   },
   logo: {
     primary: '#DE9D7B',
@@ -45,7 +45,7 @@ export const libColors: Colors = {
     color: '#FAFBFF'
   },
   moonIcon: {
-    color: '#FAFBFF'
+    color: '#3D405B'
   },
   navbar: {
     background: 'rgba(250, 251, 255, 0.75)',
