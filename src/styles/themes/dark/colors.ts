@@ -48,10 +48,10 @@ export const libColors: Colors = {
     color: '#FAFBFF'
   },
   navbar: {
-    background: 'rgba(16, 14, 23, 0.5)',
-    mobileBackground: 'rgba(16, 14, 23, 0.92)',
+    background: 'rgba(41, 44, 52, 0.75)',
+    mobileBackground: 'rgba(41, 44, 52, 0.92)',
     backdropFilter: 'blur(20px)',
     textColor: '#FAFBFF',
-    hightlightedTextColor: '#DE9D7B'
+    hightlightedTextColor: '#E29578'
   }
 };
