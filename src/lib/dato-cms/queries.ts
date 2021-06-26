@@ -54,7 +54,7 @@ export const aboutSectionQuery = `
       title
       items {
         title
-        description
+        subTitle
       }
     }
   }

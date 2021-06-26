@@ -1,6 +1,6 @@
 type QualificationItem = {
   title: string;
-  description: string;
+  subTitle: string;
 };
 
 export type Qualifications = {

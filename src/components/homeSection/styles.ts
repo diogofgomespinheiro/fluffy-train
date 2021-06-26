@@ -8,7 +8,6 @@ export const SectionContainer = styled.section`
   justify-content: center;
 
   min-height: 100vh;
-  padding-top: 72px;
   color: ${({ theme }) => theme.colors.primary};
 
   @media screen and (${deviceQueries.tablet.min}) {
