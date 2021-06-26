@@ -1,21 +1,36 @@
 import * as React from 'react';
-import axios from 'axios';
-import useSWR from 'swr';
+import { GetStaticProps } from 'next';
+import Head from 'next/head';
+import { renderMetaTags } from 'react-datocms';
 
-const fetcher = async url => {
-  const { data, status } = await axios.get(url);
+import Layout from '@/components/layout';
+import RecentWorkSection from '@/components/recentWorkSection';
 
-  if (status !== 200) {
-    throw new Error(data.message);
-  }
+import { getLandingPageContent } from '@/lib';
+import { LandingPageProps } from '@/shared';
 
-  return data;
+const LandingPage = ({ navbar, seoMetaTags }: LandingPageProps) => {
+  return (
+    <Layout
+      headerMenuItemSelectedIndex={navbar.selectedIndex}
+      headerMenuItems={navbar.items}
+      enableLinkObserver
+      linksQuery="#home, #about, #projects, #recent-work, #contact"
+    >
+      <Head>{renderMetaTags(seoMetaTags)}</Head>
+      <RecentWorkSection />
+    </Layout>
+  );
 };
 
-const IndexPage = () => {
-  const { data, error } = useSWR(`/api/behance/projects`, fetcher);
+export const getStaticProps: GetStaticProps<LandingPageProps> = async ({
+  preview = false
+}) => {
+  const props = await getLandingPageContent(preview);
 
-  return <div> </div>;
+  return {
+    props
+  };
 };
 
-export default IndexPage;
+export default LandingPage;
