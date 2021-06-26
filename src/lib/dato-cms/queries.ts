@@ -24,8 +24,12 @@ export const homeSectionQuery = `
   homeSection {
     title
     subTitle
+    resume {
+      url
+    }
     socialLinks {
-      platform
+      name
+      url
       icon {
         url
         height
@@ -33,7 +37,7 @@ export const homeSectionQuery = `
         alt
       }
     }
-    image {
+    sideImage {
       url
       alt
       responsiveImage(imgixParams: {fm: png, fit: crop, w: 400, h: 400 }) {

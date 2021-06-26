@@ -1,4 +1,6 @@
 import { HeaderMenuItem, LandingPageProps } from '@/shared';
+import { HomeSectionProps } from '@/components/homeSection';
+import { AboutSectionProps } from '@/components/aboutSection';
 import { ContactSectionProps } from '@/components/contactSection';
 
 export class LandingPagePropsMapper {
@@ -38,6 +40,20 @@ export class LandingPagePropsMapper {
         items: mappedNavbarItems
       }
     });
+    return this;
+  }
+
+  public mapHomeSectionProps(): this {
+    const homeSectionProps: HomeSectionProps = this.data.homeSection;
+
+    Object.assign(this.props, { homeSectionProps });
+    return this;
+  }
+
+  public mapAboutSectionProps(): this {
+    const aboutSectionProps: AboutSectionProps = this.data.aboutSection;
+
+    Object.assign(this.props, { aboutSectionProps });
     return this;
   }
 
