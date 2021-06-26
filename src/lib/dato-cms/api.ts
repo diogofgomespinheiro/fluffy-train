@@ -67,6 +67,7 @@ export async function getLandingPageContent(
   const mappedData = new LandingPagePropsMapper(data)
     .mapSeoProps()
     .mapHeaderProps()
+    .mapContactSectionProps()
     .getProps();
 
   return mappedData;

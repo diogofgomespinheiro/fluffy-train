@@ -1,4 +1,5 @@
 import { HeaderMenuItem, LandingPageProps } from '@/shared';
+import { ContactSectionProps } from '@/components/contactSection';
 
 export class LandingPagePropsMapper {
   data: any;
@@ -37,6 +38,19 @@ export class LandingPagePropsMapper {
         items: mappedNavbarItems
       }
     });
+    return this;
+  }
+
+  public mapContactSectionProps(): this {
+    const { title, description, buttons } = this.data.contactSection;
+
+    const contactSectionProps: ContactSectionProps = {
+      title,
+      description,
+      button: buttons[0]
+    };
+
+    Object.assign(this.props, { contactSectionProps });
     return this;
   }
 

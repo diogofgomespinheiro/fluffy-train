@@ -1,6 +1,7 @@
 import type { SeoMetaTagType } from 'react-datocms';
 
 import { HeaderMenuItem } from './header.types';
+import { ContactSectionProps } from '@/components/contactSection';
 
 export type LandingPageProps = {
   seoMetaTags: SeoMetaTagType[];
@@ -8,4 +9,5 @@ export type LandingPageProps = {
     selectedIndex: number;
     items: HeaderMenuItem[];
   };
+  contactSectionProps: ContactSectionProps;
 };

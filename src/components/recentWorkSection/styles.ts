@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
+import { sectionMixin } from '@/styles';
+
 export const MainContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  ${sectionMixin}
 `;
 
 export const Title = styled.h3`

@@ -5,11 +5,16 @@ import { renderMetaTags } from 'react-datocms';
 
 import Layout from '@/components/layout';
 import RecentWorkSection from '@/components/recentWorkSection';
+import ContactSection from '@/components/contactSection';
 
 import { getLandingPageContent } from '@/lib';
 import { LandingPageProps } from '@/shared';
 
-const LandingPage = ({ navbar, seoMetaTags }: LandingPageProps) => {
+const LandingPage = ({
+  contactSectionProps,
+  navbar,
+  seoMetaTags
+}: LandingPageProps) => {
   return (
     <Layout
       headerMenuItemSelectedIndex={navbar.selectedIndex}
@@ -19,6 +24,7 @@ const LandingPage = ({ navbar, seoMetaTags }: LandingPageProps) => {
     >
       <Head>{renderMetaTags(seoMetaTags)}</Head>
       <RecentWorkSection />
+      <ContactSection {...contactSectionProps} />
     </Layout>
   );
 };
@@ -27,6 +33,8 @@ export const getStaticProps: GetStaticProps<LandingPageProps> = async ({
   preview = false
 }) => {
   const props = await getLandingPageContent(preview);
+
+  console.log(props);
 
   return {
     props
