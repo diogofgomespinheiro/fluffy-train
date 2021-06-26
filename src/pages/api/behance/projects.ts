@@ -17,19 +17,21 @@ export default async function handler(
     const behanceProjects: BehanceProject[] = await page.evaluate(() => {
       const nodeList = document.querySelectorAll('.ProjectCoverNeue-root-166');
       const projectNodes = Array.from(nodeList);
-      const projects = projectNodes.map(node => {
-        const projectImage = node.querySelector(
-          '.ProjectCoverNeue-image-1MZ'
-        ) as HTMLImageElement;
-        const projectLink = node.querySelector(
-          '.js-project-cover-image-link'
-        ) as HTMLAnchorElement;
+      const projects = projectNodes
+        .map(node => {
+          const projectImage = node.querySelector(
+            '.ProjectCoverNeue-image-1MZ'
+          ) as HTMLImageElement;
+          const projectLink = node.querySelector(
+            '.js-project-cover-image-link'
+          ) as HTMLAnchorElement;
 
-        return {
-          imageSrc: projectImage.src,
-          url: projectLink.href
-        };
-      });
+          return {
+            imageSrc: projectImage.src,
+            url: projectLink.href
+          };
+        })
+        .filter(project => Boolean(project.imageSrc));
 
       return projects.slice(0, 12);
     });
