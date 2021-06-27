@@ -11,6 +11,7 @@
     "@diogop_96/portfolio-component-library": "^1.4.5",
     "axios": "^0.21.1",
     "next": "latest",
+    "playwright": "^1.12.3",
     "puppeteer": "^10.0.0",
     "react": "^17.0.1",
     "react-datocms": "^1.6.3",

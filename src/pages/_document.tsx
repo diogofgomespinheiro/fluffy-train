@@ -42,11 +42,12 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://www.datocms-assets.com" />
+          <link rel="preconnect" href="https://mir-s3-cdn-cf.behance.net" />
 
           <link
             as="style"
             rel="stylesheet prefetch"
-            href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
             type="text/css"
             crossOrigin="anonymous"
           />

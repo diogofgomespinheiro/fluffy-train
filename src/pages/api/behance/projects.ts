@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import puppeteer from 'puppeteer';
+import { chromium } from 'playwright';
 
 import { BehanceProject } from '@/shared';
 
@@ -8,7 +8,7 @@ export default async function handler(
   res: NextApiResponse<BehanceProject[]>
 ) {
   try {
-    const browser = await puppeteer.launch();
+    const browser = await chromium.launch();
     const page = await browser.newPage();
     await page.goto('https://www.behance.net/ritaaaqueiros/projects');
 
