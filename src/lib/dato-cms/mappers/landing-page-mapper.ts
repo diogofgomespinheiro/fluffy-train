@@ -22,7 +22,8 @@ export class LandingPagePropsMapper {
   }
 
   public mapHeaderProps(): this {
-    const { navbarSelectedItemIndex, navbarItems } = this.data.landingPage;
+    const { navbarSelectedItemIndex, navbarItems, buttons } =
+      this.data.landingPage;
 
     const mappedNavbarItems: HeaderMenuItem[] = navbarItems.map(
       (item: Record<string, unknown>) => ({
@@ -38,7 +39,8 @@ export class LandingPagePropsMapper {
     Object.assign(this.props, {
       navbar: {
         selectedIndex: navbarSelectedItemIndex,
-        items: mappedNavbarItems
+        items: mappedNavbarItems,
+        resume: buttons[0]
       }
     });
     return this;

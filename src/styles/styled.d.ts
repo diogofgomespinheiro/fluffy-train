@@ -5,6 +5,7 @@ import { ThemeColors } from '@/styles/themes';
 
 declare module 'styled-components' {
   export interface DefaultTheme extends PersonalLibraryTheme {
+    logo: string;
     colors: ThemeColors;
   }
 }

@@ -26,6 +26,7 @@ const LandingPage = ({
       headerMenuItemSelectedIndex={navbar.selectedIndex}
       headerMenuItems={navbar.items}
       enableLinkObserver
+      resume={navbar.resume}
       linksQuery="#home, #about, #projects, #recent-work, #contact"
     >
       <Head>{renderMetaTags(seoMetaTags)}</Head>

@@ -12,6 +12,10 @@ export const landingPageQuery = `
       actionType
       offset
     }
+    buttons {
+      text
+      url
+    }
   }
   site: _site {
     favicon: faviconMetaTags {

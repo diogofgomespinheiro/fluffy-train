@@ -1,6 +1,7 @@
 import type { SeoMetaTagType } from 'react-datocms';
 
 import { HeaderMenuItem } from './header.types';
+import { ButtonProps } from './button.types';
 import { HomeSectionProps } from '@/components/homeSection';
 import { AboutSectionProps } from '@/components/aboutSection';
 import { ProjectsSectionProps } from '@/components/projectsSection';
@@ -11,6 +12,7 @@ export type LandingPageProps = {
   navbar: {
     selectedIndex: number;
     items: HeaderMenuItem[];
+    resume: ButtonProps;
   };
   homeSectionProps: HomeSectionProps;
   aboutSectionProps: AboutSectionProps;

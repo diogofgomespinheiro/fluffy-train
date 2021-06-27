@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 
-import { HeaderMenuItem } from '@/shared';
+import { ButtonProps, HeaderMenuItem } from '@/shared';
 
 export type LayoutProps = {
   preview?: boolean;
   children: ReactNode;
   headerMenuItemSelectedIndex: number;
   headerMenuItems: HeaderMenuItem[];
+  resume: ButtonProps;
   enableLinkObserver?: boolean;
   linksQuery?: string;
 };

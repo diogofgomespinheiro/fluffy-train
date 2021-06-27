@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useRouter } from 'next/router';
 import useDarkMode from 'use-dark-mode';
 import {
+  Button,
   Navbar,
   ThemeSwitcher,
   useNavbar
@@ -15,7 +16,8 @@ import * as S from './styles';
 const Header = ({
   menuItems,
   enableLinkObserver,
-  linksQuery = ''
+  linksQuery = '',
+  resume
 }: HeaderProps) => {
   const router = useRouter();
   const darkMode = useDarkMode();
@@ -56,6 +58,9 @@ const Header = ({
     <Navbar
       icon={<S.Logo onClick={() => router.push('/')} />}
       menuListItems={navBarMenuListItems}
+      extraMenuItem={
+        <Button onClick={() => window.open(resume.url)}>{resume.text}</Button>
+      }
       extraItems={
         <ThemeSwitcher
           controlledState={darkMode.value}

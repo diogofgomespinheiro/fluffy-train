@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { body2Mixin } from '@diogop_96/portfolio-component-library';
+import { body3Mixin } from '@diogop_96/portfolio-component-library';
 
 import { sectionMixin } from '@/styles';
 
@@ -25,7 +25,7 @@ export const ProjectsContainer = styled.section`
 `;
 
 export const TechContainer = styled.span`
-  ${body2Mixin}
+  ${body3Mixin}
 
   display: flex;
   align-items: center;

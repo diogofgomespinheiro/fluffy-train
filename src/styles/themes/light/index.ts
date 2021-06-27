@@ -10,5 +10,6 @@ export const lightTheme: DefaultTheme = {
     dimensions: libDimensions,
     text: libText
   },
-  colors
+  colors,
+  logo: 'logo-light'
 };

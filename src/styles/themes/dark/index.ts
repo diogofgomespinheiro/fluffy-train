@@ -10,5 +10,6 @@ export const darkTheme: DefaultTheme = {
     dimensions: libDimensions,
     text: libText
   },
-  colors
+  colors,
+  logo: 'logo-dark'
 };
