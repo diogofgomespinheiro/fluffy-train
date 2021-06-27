@@ -69,6 +69,8 @@ export const projectsSectionQuery = `
       coverImage {
         url
         alt
+        height
+        width
         responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 500, h: 350 }) {
           ...responsiveImageFragment
         }

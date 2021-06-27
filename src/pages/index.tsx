@@ -6,6 +6,7 @@ import { renderMetaTags } from 'react-datocms';
 import Layout from '@/components/layout';
 import HomeSection from '@/components/homeSection';
 import AboutSection from '@/components/aboutSection';
+import ProjectsSection from '@/components/projectsSection';
 import RecentWorkSection from '@/components/recentWorkSection';
 import ContactSection from '@/components/contactSection';
 
@@ -15,6 +16,7 @@ import { LandingPageProps } from '@/shared';
 const LandingPage = ({
   homeSectionProps,
   aboutSectionProps,
+  projectsSectionProps,
   contactSectionProps,
   navbar,
   seoMetaTags
@@ -29,6 +31,7 @@ const LandingPage = ({
       <Head>{renderMetaTags(seoMetaTags)}</Head>
       <HomeSection {...homeSectionProps} />
       <AboutSection {...aboutSectionProps} />
+      <ProjectsSection {...projectsSectionProps} />
       <RecentWorkSection />
       <ContactSection {...contactSectionProps} />
     </Layout>

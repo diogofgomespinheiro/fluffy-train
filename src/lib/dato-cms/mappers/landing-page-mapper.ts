@@ -1,6 +1,7 @@
 import { HeaderMenuItem, LandingPageProps } from '@/shared';
 import { HomeSectionProps } from '@/components/homeSection';
 import { AboutSectionProps } from '@/components/aboutSection';
+import { ProjectsSectionProps } from '@/components/projectsSection';
 import { ContactSectionProps } from '@/components/contactSection';
 
 export class LandingPagePropsMapper {
@@ -54,6 +55,14 @@ export class LandingPagePropsMapper {
     const aboutSectionProps: AboutSectionProps = this.data.aboutSection;
 
     Object.assign(this.props, { aboutSectionProps });
+    return this;
+  }
+
+  public mapProjectsSection(): this {
+    const projectsSectionProps: ProjectsSectionProps =
+      this.data.projectsSection;
+
+    Object.assign(this.props, { projectsSectionProps });
     return this;
   }
 

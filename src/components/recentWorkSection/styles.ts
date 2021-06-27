@@ -1,9 +1,15 @@
 import styled from 'styled-components';
+import { deviceQueries } from '@diogop_96/portfolio-component-library';
 
 import { sectionMixin } from '@/styles';
 
 export const MainContainer = styled.section`
   ${sectionMixin}
+  margin-top: 100px;
+
+  @media screen and (${deviceQueries.tablet.min}) {
+    margin-top: 150px;
+  }
 `;
 
 export const Title = styled.h3`

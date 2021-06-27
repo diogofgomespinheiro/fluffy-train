@@ -69,6 +69,7 @@ export async function getLandingPageContent(
     .mapHeaderProps()
     .mapHomeSectionProps()
     .mapAboutSectionProps()
+    .mapProjectsSection()
     .mapContactSectionProps()
     .getProps();
 

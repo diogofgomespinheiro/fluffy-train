@@ -3,6 +3,7 @@ import type { SeoMetaTagType } from 'react-datocms';
 import { HeaderMenuItem } from './header.types';
 import { HomeSectionProps } from '@/components/homeSection';
 import { AboutSectionProps } from '@/components/aboutSection';
+import { ProjectsSectionProps } from '@/components/projectsSection';
 import { ContactSectionProps } from '@/components/contactSection';
 
 export type LandingPageProps = {
@@ -13,5 +14,6 @@ export type LandingPageProps = {
   };
   homeSectionProps: HomeSectionProps;
   aboutSectionProps: AboutSectionProps;
+  projectsSectionProps: ProjectsSectionProps;
   contactSectionProps: ContactSectionProps;
 };
